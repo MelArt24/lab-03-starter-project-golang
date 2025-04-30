@@ -11,7 +11,7 @@ COPY . .
 
 RUN go build -o main .
 
-FROM scratch
+FROM gcr.io/distroless/static-debian12
 
 COPY --from=builder /app/main /app/main
 
